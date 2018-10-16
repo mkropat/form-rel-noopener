@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Derived from: https://mathiasbynens.github.io/rel-noopener/ -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Go back!</title>
+</head>
+<body>
+
+<h1>Why don’t you go back to the previous tab?</h1>
+
+<script>
+if (window.opener) {
+  opener.location = 'http://localhost:3000/#hax';
+} else {
+  document.querySelector('h1').innerHTML = 'The previous tab is safe and intact. <code>window.opener</code> was <code>null</code>; mischief <em>not</em> managed!';
+}
+</script>
+
+</body>
+</html>

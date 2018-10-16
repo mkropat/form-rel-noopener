@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Derived from: https://mathiasbynens.github.io/rel-noopener/ -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rel=noopener + forms</title>
+  <style>
+    #hax { display: none; font-family: Comic Sans MS; color: red; transform: rotate(-5deg); }
+    #hax:target { display: block; }
+  </style>
+</head>
+<body>
+
+<h1 id="hax">0m6 you’ve been h4ck3d!!1one!shift!!!1 💩</h1>
+
+<p><a href="malicious.html" target="_blank"><b>Click me!!1</b></a></p>
+
+<p><a href="malicious.html" target="_blank" rel="noopener"><b>Click me!!1 (now with <code>rel=noopener</code>)</b></a></p>
+
+<p>
+  <form action="/malicious.html" method="post" target="_blank">
+    <input type="submit" value="Submit me!!1" />
+  </form>
+</p>
+
+<p>
+  <form action="/redirect" method="post" target="_blank">
+    <input type="submit" value="Submit me!!1" /> (with redirect)
+  </form>
+</p>
+
+<p>
+  <form action="/malicious.html" method="post" target="_blank" rel="noopener">
+    <input type="submit" value="Submit me!!1" /> (now with <code>rel=noopener</code>)
+  </form>
+</p>
+
+</body>
+</html>
